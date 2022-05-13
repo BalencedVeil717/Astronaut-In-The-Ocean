@@ -10,9 +10,6 @@ if(readMoreBtn.innerText === 'Load Lyrics'){
 }
 });
 
-
-const cursor = document.querySelector(".cursor");
-
 window.addEventListener("mousemove", (e) => {
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY + "px";
@@ -21,9 +18,6 @@ window.addEventListener("mousemove", (e) => {
 });
 window.addEventListener("scroll", () => {
     const fromTop = cursor.getAttribute("data-fromTop");
-    cursor.style.top = scrollY + paraseInt(fromTop) + "px";
-    console.log(scrollY)
-});
 
 window.addEventListener('click', () => {
    if(cursor.classList.contains('click')){
